@@ -62,3 +62,12 @@ function deplacement(){
     })
 }
 document.addEventListener("DOMContentLoaded",deplacement);
+function navbarMenu(){
+    const menulist= document.getElementById("navlist");
+    const navbtn=document.getElementById("navbar");
+    navbtn.addEventListener("click",()=>{
+        menulist.classList.toggle("open");
+        
+    })
+}
+document.addEventListener("DOMContentLoaded",navbarMenu);

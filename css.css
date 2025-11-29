@@ -18,10 +18,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    position: sticky;
+    position: fixed;
+    padding: 0;
+    margin: 0;
 
     
 
@@ -79,13 +82,12 @@ body{
 .menu_class .checkOuT button:focus {
   background-color: #F082AC;
 }.home{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 0;
-    padding: 0 20px;
-    margin-top: 50px;
-    width: 100%;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  margin-top: 100px;
 }.devUser{
     float: left;
     width: 50%;
@@ -101,15 +103,16 @@ body{
     font-weight: 500;
     font-size: 24px;
     margin-bottom: 20px;
-    padding-bottom: 50px;
-    padding-left: 100px;
+    padding-bottom: 0;
+    gap: 0;
+   
 
 }.par .jboy{
     
      font-size: 60px; 
      font-family: Copperplate, Papyrus, fantasy;
-    font-weight: bold; 
-    color: #EA4C89;
+     font-weight: bold; 
+     color: #EA4C89;
 
 }
 .par .role {
@@ -129,7 +132,38 @@ body{
 }
 .devUser .hire_me #hire:hover{
     background-color: black ;
-}.about {
+}
+
+#hire{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 10px;
+  gap: 0;
+}
+
+.about {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -505,13 +539,42 @@ hr {
 }
 
 @media (max-width: 900px) {
-  .contact {
-    flex-direction: column; 
-    align-items: center; 
-    gap: 0px;
+  .home {
+    padding: 50px;
+    gap: 20px;
+  }
+  .devUser, .contact {
+    width: 50%; /* Toujours 50% même en mobile */
+  }
+
+  .par {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .jboy {
+    font-size: 32px !important;
+  }
+
+  .profile  {
+    
+    background-color: rgb(15, 5, 5);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+  }.profile img{
+     width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
   }
   .users_details_contact{
     margin-right: -270px;
+  }.about{
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -589,4 +652,60 @@ hr {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+  .navbar{
+  display: none;
+
+
+}
+.navbar i{
+    width: 400px;
+
+  }
+@media (max-width: 900px) {
+  .navbar{
+    display: flex;
+   
+  }
+  .navbar i{
+    width: 400px;
+    font-size: 35px;
+    margin-left: 700px;
+    color: rebeccapurple;
+  }
+  .menu_class{
+    display: block;
+  }
+}@media (max-width: 900px) {
+ .menu_class {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-15px) scale(0.97);
+  transition:
+    max-height 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* When opened */
+.menu_class.open {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  padding: 20}
+
+  .navbar {
+    display: block;
+    cursor: pointer;
+  }
 }
