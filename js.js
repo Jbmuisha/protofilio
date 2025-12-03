@@ -45,7 +45,7 @@ function deplacement(){
 
     moveDroi.addEventListener("click",()=>{
         console.log("right click succefully");
-        if( current < totalCard){
+        if( current < totalCard - 1){
             current++;
             updateMove();
         }
@@ -71,3 +71,15 @@ function navbarMenu(){
     })
 }
 document.addEventListener("DOMContentLoaded",navbarMenu);
+function downloadCv(){
+    const downloadBtn=document.getElementById("project_project");
+    downloadBtn.addEventListener("click",()=>{
+        console.log(" file downloads sucessfully ......");
+        const link=document.createElement("a")
+        link.href='JEAN MUISHA SHEBANDU1.pdf'
+        link.download='JEAN MUISHA SHEBANDU1.pdf'
+        link.click()
+        
+    })
+
+}document.addEventListener("DOMContentLoaded",downloadCv)
