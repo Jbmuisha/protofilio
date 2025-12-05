@@ -401,7 +401,6 @@ section {
   transition: all 0.3s ease;
   z-index: 5;
 }
-
 .slider-btn:hover {
   background: #5148e7;
   transform: scale(1.1);
@@ -446,9 +445,7 @@ html, body {
 
 .users_details_contact {
     flex-basis: 350px;
-    margin-top: 80px;
-   
-    
+    margin-top: 80px;   
 }
 
 .contact_div {
@@ -457,7 +454,6 @@ html, body {
     padding: 40px;
     border-radius: 18px; 
 }
-
 .user_container {
     background: #fff;
     padding: 20px;
@@ -776,12 +772,18 @@ hr {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  justify-content: center;   /* centre horizontal */
-  align-items: center;       /* centre vertical */
+  align-items: center;       
   min-height: 50vh;
+  padding-left: 200px;
+ 
+
+}
+.security_grid > div {
+  width: 45%; 
+  border-radius: 18px;/* par exemple */
 }
 
-/* LEFT SIDE */
+
 .left_performance .performance {
   margin-bottom: 20px;
   
@@ -806,16 +808,16 @@ hr {
   width: var(--percentage);
   transition: 1s ease;
 }
-/* RIGHT SECTION IN ROW FORMAT */
+
 .right_performance_row {
   display: grid;
-  grid-template-columns: 180px 1fr; /* donut left | tools right */
+  grid-template-columns: 180px 1fr; 
   gap: 25px;
   align-items: center;
   
 }
 
-/* Donut styling */
+
 .donut_box {
   text-align: center;
 }
@@ -836,7 +838,7 @@ hr {
   font-weight: bold;
 }
 
-/* Tools list */
+
 .security_tools h3 {
   margin-bottom: 10px;
   font-weight: bold;
@@ -854,7 +856,6 @@ hr {
   font-size: 2.6rem;
   color: #222;
   margin-bottom: 40px;
-  text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 800;
   position: relative;
@@ -864,19 +865,68 @@ hr {
 .generale_tite h1::after {
   content: "";
   position: absolute;
-  width: 70px;
+  width: 200px;
   height: 4px;
   background: #6c63ff;
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
+}.tex{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
-
-/* Responsive */
 @media (max-width: 900px) {
-  .right_performance_row {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .donut {
+    width: 70px;
+    height: 70px;
   }
+
+  .right_performance_row {
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+  }
+
+  .skill-bar {
+    height: 8px;
+  }
+}
+@media (max-width: 900px) {
+  .security_grid {
+    flex-direction: column;
+    padding-left: 0;   
+    min-height: 50vh;
+
+  
+  }
+
+  .security_grid > div {
+    width: 45%; 
+     margin-bottom: 30px; 
+       margin-top: 30px;/* pour que les éléments prennent toute la largeur */
+  }.donut_text{
+    margin-right: 200px;
+    padding-right: 400px;
+  }
+  .donut {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-left: -50px;
+  background:
+    radial-gradient(white 55%, transparent 56%),
+    conic-gradient(#0078ff calc(var(--value) * 1%), #ddd 0);
+  
+}
+.security_tools{
+  margin-left: 50px;
+}.contacter{
+  flex-direction: column;
+
+}.mycontent{
+  padding-right: 400px;
+}
 }
