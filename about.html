@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="css.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <style>
+    section {
+      margin-top: 40px;
+    }
+    .aboutToggle {
+      display: inline-block;
+      margin-top: 15px;
+      cursor: pointer;
+      color: #007bff;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .aboutToggle i.arrow {
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform 0.3s;
+    }
+
+    .aboutToggle.active i.arrow {
+      transform: rotate(180deg);
+    }
+    .seeMoreIcon {
+      margin-bottom: 99px;
+    }
+  </style>
+
+  <body>
+    <div class="head_menu" id="head_menu">
+      <div class="bar_menu">
+        <ul class="menu_class" id="navlist">
+          <li><a href="/protofolio.html">Home</a></li>
+          <li><a href="/about.html">about</a></li>
+          <li><a href="/project.html">Project</a></li>
+          <li><a href="/contacter.html">Contact Me</a></li>
+
+          <li class="checkOuT">
+            <button id="project_project">Resume CV</button>
+          </li>
+        </ul>
+
+        <!-- HAMBURGER BTN (correctly placed OUTSIDE the ul) -->
+        <div class="navbar" id="navbar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+    <section class="about">
+      <div class="about_main_container">
+        <!-- Profile Image -->
+        <div class="about_image">
+          <img src="/image/DSC02505.JPEG" alt="Jean Muisha Shebandu" />
+        </div>
+
+        <!-- About Info -->
+        <div class="about_info">
+          <h1 class="title">About Me</h1>
+
+          <!-- Short Bio with Expandable Text -->
+          <p class="myself" id="aboutText">
+            I am Jean Muisha Shebandu, a Freelance Web Developer, ERP System
+            Developer, Mobile Developer, Network Engineer & Cybersecurity
+            Specialist, focused on real-time communication and secure digital
+            solutions.
+            <span id="aboutMoreText" style="display: none">
+              My expertise includes ERP system development, mobile application
+              development, cybersecurity, router and network configuration,
+              Microsoft 365 email setup (MX, DKIM, DMARC), real-time systems,
+              secure infrastructures, web application development, Socket
+              Programming in C++, Mail Automation, and Chat Bot projects. I am
+              passionate about creating modern, secure, and reliable digital
+              solutions that empower individuals and businesses.
+            </span>
+          </p>
+
+          <div class="aboutToggle" id="aboutToggle">
+            <i class="arrow down"></i> Read More
+          </div>
+
+          <!-- Quick Info Grid -->
+          <div class="about_quick_info">
+            <div class="info_item">
+              <strong>Name:</strong> Jean Muisha Shebandu
+            </div>
+            <div class="info_item"><strong>Nationality:</strong> Congolese</div>
+            <div class="info_item">
+              <strong>Languages:</strong> French & English
+            </div>
+            <div class="info_item">
+              <strong>Communication:</strong> Very Good
+            </div>
+            <div class="info_item">
+              <strong>Profession:</strong> Freelance Web, ERP & Mobile
+              Developer, Network Engineer & Cybersecurity Specialist
+            </div>
+            <div class="info_item">
+              <strong>Education:</strong> BSc in Information Technology –
+              Northern Cyprus
+            </div>
+
+            <div class="info_item">
+              <strong>Email:</strong> jbmuisha@gmail.com
+            </div>
+            <div class="info_item">
+              <strong>Status:</strong> Available for freelance & collaboration
+              projects
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js.js"></script>
+  </body>
+</html>

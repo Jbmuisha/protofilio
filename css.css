@@ -49,8 +49,7 @@ section {
     text-decoration: none;
     color:  black;
 }.menu_class .checkOuT button{
-    
-   background-color: #EA4C89;
+  background-color: rgb(20, 98, 188);
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -73,17 +72,11 @@ section {
   vertical-align: baseline;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-    
-    
+  touch-action: manipulation;   
 }
-
-
-
-
 .menu_class .checkOuT button:hover,
 .menu_class .checkOuT button:focus {
-  background-color: #F082AC;
+  background-color: black;
 }.home{
     display: flex;
   justify-content: space-between;
@@ -115,7 +108,7 @@ section {
      font-size: 60px; 
      font-family: Copperplate, Papyrus, fantasy;
      font-weight: bold; 
-     color: #EA4C89;
+     color:  rgb(20, 98, 188);
 
 }
 .par .role {
@@ -138,7 +131,7 @@ section {
 }
 
 #hire{
-  background-color: #EA4C89;
+  background-color:  rgb(20, 98, 188);
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -190,7 +183,7 @@ section {
 .about_me_info .title {
   font-family: "Franklin Gothic Medium", Arial, sans-serif;
   font-size: 28px;
-  color: #ea4c89;
+  color: rgb(20, 98, 188);
   margin-bottom: 15px;
   text-align: left;
 }
@@ -217,7 +210,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ea4c89;
+  background-color:rgb(20, 98, 188);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,7 +254,7 @@ section {
 }
 
 .identification .id {
-  background-color: #ea4c89;
+  background-color:  rgb(20, 98, 188);
   color: white;
   font-weight: bold;
   padding: 4px 10px;
@@ -299,7 +292,7 @@ section {
   position: absolute;
   width: 70px;
   height: 4px;
-  background: #6c63ff;
+  background:rgb(20, 98, 188);
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
@@ -377,12 +370,12 @@ section {
 
 .git a {
   font-size: 28px;
-  color: #6c63ff;
+  color: black;
   transition: all 0.3s ease;
 }
 
 .git a:hover {
-  color: #4b44e3;
+  color: black;
   transform: scale(1.2);
 }
 
@@ -390,7 +383,7 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #6c63ff;
+  background: rgb(20, 98, 188);
   color: #fff;
   border: none;
   padding: 14px 18px;
@@ -402,7 +395,7 @@ section {
   z-index: 5;
 }
 .slider-btn:hover {
-  background: #5148e7;
+  background:  black;
   transform: scale(1.1);
 }
 
@@ -455,7 +448,7 @@ html, body {
   position: absolute;
   width: 80px;
   height: 4px;
-  background: #6c63ff;
+   background-color: rgb(20, 98, 188);
   left: 50%;
   transform: translateX(-50%);
   bottom: -10px;
@@ -515,14 +508,14 @@ html, body {
 .media_content i {
   font-size: 2rem;
   margin-right: 18px;
-  color: #6c63ff;
+  color:   rgb(20, 98, 188);
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .media_content i:hover {
   transform: scale(1.2);
-  color: #3c37cc;
+  color: black;
 }
 
 
@@ -720,7 +713,7 @@ hr {
     width: 400px;
     font-size: 35px;
     margin-left: 700px;
-    color: rebeccapurple;
+    color:  rgb(20, 98, 188);
   }
   .menu_class{
     display: block;
@@ -836,7 +829,7 @@ hr {
 }
 .skill-per {
   height: 100%;
-  background: #0078ff;
+  background:  rgb(20, 98, 188);
   width: var(--percentage);
   transition: 1s ease;
 }
@@ -857,8 +850,8 @@ hr {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(white 55%, transparent 56%),
-    conic-gradient(#0078ff calc(var(--value) * 1%), #ddd 0);
+  radial-gradient(white 55%, transparent 56%),
+  conic-gradient(   rgb(20, 98, 188) calc(var(--value) * 1%), #ddd 0);
 }
 .donut_text {
   margin-top: 10px;
@@ -889,7 +882,7 @@ hr {
   position: absolute;
   width: 200px;
   height: 4px;
-  background: #6c63ff;
+ background:   rgb(20, 98, 188);
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
@@ -944,4 +937,199 @@ hr {
   
 
 }
+/* Add this to your CSS file */
+.menu_class a.active {
+    color: white; 
+    background-color: #007bff;
+    text-decoration: underline;
+    
+}
 
+/* Main container */
+.about_main_container {
+    display: flex;
+    flex-wrap: wrap; /* stack on smaller screens */
+    gap: 25px; /* smaller gap */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 15px; /* reduced padding */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Profile Image */
+.about_image {
+    flex: 1 1 200px; /* slightly smaller min width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_image img {
+    width: 100%;
+    max-width: 250px; /* smaller image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.about_info {
+    flex: 2 1 350px; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.about_info .title {
+    font-size: 1.8rem; 
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.about_info .myself {
+    line-height: 1.4; 
+    font-size: 0.9rem; 
+    color: #333;
+}
+
+
+#aboutMoreText {
+    display: none; 
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-height: none; 
+    overflow: visible; 
+    transition: max-height 0.3s ease; 
+}
+
+
+.aboutToggle {
+    cursor: pointer;
+    font-size: 0.9rem;
+     color: rgb(20, 98, 188);
+    font-weight: 600;
+    user-select: none;
+}
+
+.aboutToggle i.arrow {
+    margin-right: 5px;
+}
+
+.about_quick_info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Info Items */
+.info_item {
+    background: linear-gradient(135deg, #f0f4ff, #e6ebff); /* soft gradient */
+    padding: 15px 20px;
+    border-radius: 12px; /* smooth corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #1a1a1a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for cards */
+.info_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Strong label style */
+.info_item strong {
+    color:   rgb(20, 98, 188); /* highlight labels */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about_quick_info {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+    }
+
+    .info_item {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about_quick_info {
+        grid-template-columns: 1fr; /* single column for small screens */
+        gap: 10px;
+    }
+
+    .info_item {
+        font-size: 0.8rem;
+        padding: 10px 12px;
+    }
+}
+
+
+/* Ensure text wraps properly */
+#aboutText span {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about_main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_image, .about_info {
+        flex: 1 1 100%;
+    }
+}
+/* About Info Text */
+.about_info .myself,
+#aboutMoreText,
+.about_quick_info .info_item {
+    font-size: 0.9rem; /* default desktop font */
+    line-height: 1.4;
+}
+
+/* Responsive font size for tablets */
+@media (max-width: 992px) {
+    .about_info .myself,
+    #aboutMoreText,
+    .about_quick_info .info_item {
+        font-size: 0.85rem; /* slightly smaller */
+    }
+}
+
+/* Responsive font size for mobile devices */
+@media (max-width: 768px) {
+    .about_info .myself,
+    #aboutMoreText,
+    .about_quick_info .info_item {
+        font-size: 0.5rem; /* smaller font for small screens */
+        line-height: 1.35;
+    }
+
+    .about_main_container {
+        padding: 20px 10px; /* reduce container padding */
+    }
+
+    .about_image img {
+        max-width: 200px; /* reduce image size */
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .about_info .myself,
+    #aboutMoreText,
+    .about_quick_info .info_item {
+        font-size: 0.60rem;
+        line-height: 1.3;
+    }
+}

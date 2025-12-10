@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="css.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <style>
+    section {
+      margin-top: 100px;
+    }
+  </style>
+
+  <body>
+    <div class="head_menu" id="head_menu">
+      <div class="bar_menu">
+        <ul class="menu_class" id="navlist">
+          <li><a href="/protofolio.html">Home</a></li>
+          <li><a href="/about.html">about</a></li>
+          <li><a href="/project.html">Project</a></li>
+          <li><a href="/contacter.html">Contact Me</a></li>
+
+          <li class="checkOuT">
+            <button id="project_project">Resume CV</button>
+          </li>
+        </ul>
+
+        <!-- HAMBURGER BTN (correctly placed OUTSIDE the ul) -->
+        <div class="navbar" id="navbar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+    <section class="entier">
+      <div class="gen_titre">
+        <h1>contact me</h1>
+      </div>
+      <div class="contacter">
+        <div class="users_details_contact">
+          <div class="user_container">
+            <div class="label">Personal Info</div>
+            <div class="mycontent">
+              <ul>
+                <li>Email:jbmuisha@gmail.com</li>
+                <li>Address:HAMTKOY MESEK SOK</li>
+                <li>phone: +1 (303)354 1609</li>
+              </ul>
+            </div>
+            <hr />
+
+            <div class="media">
+              <div class="label">Social Media</div>
+
+              <div class="media_content">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+
+        <div class="contact_div">
+          <form action="" id="myForm">
+            <label for="">Username</label>
+            <input type="text" id="username" />
+
+            <label for="">Email </label>
+            <input type="text" id="Email" />
+
+            <label for="">Note </label>
+            <textarea name="usermessage" id="message"></textarea>
+            <button type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="js.js"></script>
+  </body>
+</html>
