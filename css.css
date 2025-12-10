@@ -937,7 +937,7 @@ hr {
   
 
 }
-/* Add this to your CSS file */
+
 .menu_class a.active {
     color: white; 
     background-color: #007bff;
@@ -945,21 +945,21 @@ hr {
     
 }
 
-/* Main container */
+
 .about_main_container {
     display: flex;
-    flex-wrap: wrap; /* stack on smaller screens */
-    gap: 25px; /* smaller gap */
+    flex-wrap: wrap;
+    gap: 25px;
     justify-content: center;
     align-items: flex-start;
-    padding: 30px 15px; /* reduced padding */
+    padding: 30px 15px; 
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Profile Image */
+
 .about_image {
-    flex: 1 1 200px; /* slightly smaller min width */
+    flex: 1 1 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -967,7 +967,7 @@ hr {
 
 .about_image img {
     width: 100%;
-    max-width: 250px; /* smaller image */
+    max-width: 250px; 
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -1023,30 +1023,29 @@ hr {
     margin-top: 20px;
 }
 
-/* Individual Info Items */
+
 .info_item {
-    background: linear-gradient(135deg, #f0f4ff, #e6ebff); /* soft gradient */
+    background: linear-gradient(135deg, #f0f4ff, #e6ebff); 
     padding: 15px 20px;
-    border-radius: 12px; /* smooth corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
     font-size: 0.9rem;
     line-height: 1.4;
     color: #1a1a1a;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect for cards */
 .info_item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Strong label style */
+
 .info_item strong {
-    color:   rgb(20, 98, 188); /* highlight labels */
+    color:   rgb(20, 98, 188); 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .about_quick_info {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1061,7 +1060,7 @@ hr {
 
 @media (max-width: 480px) {
     .about_quick_info {
-        grid-template-columns: 1fr; /* single column for small screens */
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
@@ -1072,13 +1071,13 @@ hr {
 }
 
 
-/* Ensure text wraps properly */
+
 #aboutText span {
     white-space: normal;
     word-wrap: break-word;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .about_main_container {
         flex-direction: column;
@@ -1089,42 +1088,42 @@ hr {
         flex: 1 1 100%;
     }
 }
-/* About Info Text */
+
 .about_info .myself,
 #aboutMoreText,
 .about_quick_info .info_item {
-    font-size: 0.9rem; /* default desktop font */
+    font-size: 0.9rem; 
     line-height: 1.4;
 }
 
-/* Responsive font size for tablets */
+
 @media (max-width: 992px) {
     .about_info .myself,
     #aboutMoreText,
     .about_quick_info .info_item {
-        font-size: 0.85rem; /* slightly smaller */
+        font-size: 0.85rem; 
     }
 }
 
-/* Responsive font size for mobile devices */
+
 @media (max-width: 768px) {
     .about_info .myself,
     #aboutMoreText,
     .about_quick_info .info_item {
-        font-size: 0.5rem; /* smaller font for small screens */
+        font-size: 0.5rem; 
         line-height: 1.35;
     }
 
     .about_main_container {
-        padding: 20px 10px; /* reduce container padding */
+        padding: 20px 10px; 
     }
 
     .about_image img {
-        max-width: 200px; /* reduce image size */
+        max-width: 200px; 
     }
 }
 
-/* Very small screens */
+
 @media (max-width: 480px) {
     .about_info .myself,
     #aboutMoreText,
