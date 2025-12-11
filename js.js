@@ -137,21 +137,15 @@ function showNotification(message, isError = false) {
 document.addEventListener("DOMContentLoaded", sendIput);
 function setActiveNav() {
     
-    const navLinks = document.querySelectorAll('.menu_class a');
+    const currentLocation = location.pathname;
+const menuItems = document.querySelectorAll(".menu_class li a");
 
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            
-            
-            navLinks.forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            
-            this.classList.add('active');
-        });
-    });
+menuItems.forEach(link => {
+  if(link.getAttribute("href") === currentLocation){
+    link.classList.add("active");
+  }
+});
+
 }
 
 
