@@ -505,18 +505,23 @@ html, body {
 }
 
 
-.media_content i {
+.media_content a {
+  text-decoration: none; 
+}
+
+.media_content a i {
   font-size: 2rem;
   margin-right: 18px;
-  color:   rgb(20, 98, 188);
+  color: rgb(20, 98, 188);
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-.media_content i:hover {
+.media_content a i:hover {
   transform: scale(1.2);
   color: black;
 }
+
 
 
 form {
