@@ -69,16 +69,17 @@
         </div>
 
         <div class="contact_div">
-          <form action="" id="myForm">
-            <label for="">Username</label>
-            <input type="text" id="username" />
+          <form id="myForm">
+            <label>Username</label>
+            <input type="text" id="username" name="username" required />
 
-            <label for="">Email </label>
-            <input type="text" id="Email" />
+            <label>Email</label>
+            <input type="email" id="email" name="email" required />
 
-            <label for="">Note </label>
-            <textarea name="usermessage" id="message"></textarea>
-            <button type="submit"></button>
+            <label>Note</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
           </form>
         </div>
       </div>

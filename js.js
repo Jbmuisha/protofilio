@@ -85,64 +85,76 @@ function downloadCv(){
 
 }document.addEventListener("DOMContentLoaded",downloadCv)
 
-function sendIput(){
-    const form = document.getElementById("myForm");
-    const webAppUrl = "https://script.google.com/macros/s/AKfycbx65RgRG6afIPwMtu-r1pEzvn4d1chwfOPq59tNNLPWae48tjREtwAwRXOWp3bxYHp8CQ/exec";
-;
+function sendIput() {
+  const form = document.getElementById("myForm");
+  const webAppUrl =
+    "https://script.google.com/macros/s/AKfycbx65RgRG6afIPwMtu-r1pEzvn4d1chwfOPq59tNNLPWae48tjREtwAwRXOWp3bxYHp8CQ/exec";
 
-form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const formData = new FormData(form);
 
-    // Convert formData to URL-encoded string
-    const params = new URLSearchParams();
-    for (const pair of formData.entries()) {
-        params.append(pair[0], pair[1]);
-    }
-
     fetch(webAppUrl, {
-        method: "POST",
-        body: params
+      method: "POST",
+      mode: "no-cors", // required for Google Apps Script
+      body: formData,
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            alert(data.msg);
-            form.reset(); // Clear form
-        } else {
-            alert("Error: " + data.msg);
-        }
-    })
-    .catch(error => {
-        alert("There was an error submitting the form: " + error.message);
-        console.error(error);
-    });
-});
+      .then(() => {
+        showNotification(
+          "Your message has been sent successfully! We will get back to you soon."
+        );
+        form.reset();
+      })
+      .catch((err) => {
+        showNotification("There was an error submitting your message.", true);
+        console.error(err);
+      });
+  });
+}
 
 
+function showNotification(message, isError = false) {
 
-}document.addEventListener("DOMContentLoaded",sendIput);
+  const notification = document.createElement("div");
+  notification.className = "notification";
+  if (isError) notification.classList.add("error");
+  notification.textContent = message;
+
+
+  document.body.appendChild(notification);
+
+
+  setTimeout(() => {
+    notification.classList.add("hide");
+    setTimeout(() => {
+      notification.remove();
+    }, 500);
+  }, 4000);
+}
+
+
+document.addEventListener("DOMContentLoaded", sendIput);
 function setActiveNav() {
-    // 1. Get all the links inside the menu_class UL
+    
     const navLinks = document.querySelectorAll('.menu_class a');
 
-    // 2. Add a click event listener to each link
+    
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             
-            // 3. Remove the 'active' class from all links first
+            
             navLinks.forEach(item => {
                 item.classList.remove('active');
             });
             
-            // 4. Add the 'active' class only to the link that was clicked
+            
             this.classList.add('active');
         });
     });
 }
 
-// Ensure the function runs once the HTML is loaded
+
 document.addEventListener("DOMContentLoaded", setActiveNav);
 function toggleReadMore(toggleId, textId) {
   const toggle = document.getElementById(toggleId);
@@ -163,5 +175,25 @@ function toggleReadMore(toggleId, textId) {
   });
 }
 
-// Call the function for your About section
 toggleReadMore("aboutToggle", "aboutMoreText");
+function showNotification(message, isError = false) {
+    const box = document.getElementById("notification");
+
+    box.textContent = message;
+
+  
+    if (isError) {
+        box.style.background = "#e60000"; 
+    } else {
+        box.style.background = "#4CAF50"; 
+    }
+
+    box.classList.remove("hidden");
+    box.classList.add("show");
+
+  
+    setTimeout(() => {
+        box.classList.remove("show");
+        setTimeout(() => box.classList.add("hidden"), 500);
+    }, 4000);
+}
