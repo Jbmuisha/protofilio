@@ -97,7 +97,7 @@ function sendIput() {
 
     fetch(webAppUrl, {
       method: "POST",
-      mode: "no-cors", // required for Google Apps Script
+      mode: "no-cors", 
       body: formData,
     })
       .then(() => {
