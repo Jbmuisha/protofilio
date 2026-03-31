@@ -76,8 +76,8 @@ function downloadCv(){
     downloadBtn.addEventListener("click",()=>{
        
         const link=document.createElement("a")
-        link.href='JEAN MUISHA SHEBANDU1.pdf'
-        link.download='JEAN MUISHA SHEBANDU1.pdf'
+        link.href='JEAN MUISHA SHEBANDU.pdf'
+        link.download='JEAN MUISHA SHEBANDU.pdf'
         link.click()
          console.log(" file downloads sucessfully ......");
         
